@@ -1,0 +1,78 @@
+\documentclass[dvipdfmx]{ujarticle}
+
+%パッケージ
+\usepackage{amssymb,amsmath}
+\usepackage[dvipdfmx]{graphicx}
+
+%レイアウト
+\setlength{\oddsidemargin}{0mm}
+\setlength{\textwidth}{160mm}
+\setlength{\topmargin}{-9mm}
+\setlength{\headheight}{0mm}
+\setlength{\textheight}{241mm}
+
+%定理環境
+\usepackage{theorem}\theorembodyfont{\normalfont}
+\newtheorem{definition}{定義}[section]
+\newtheorem{lemma}[definition]{補題}
+\newtheorem{theorem}[definition]{定理}
+\newtheorem{corollary}[definition]{系}
+\newtheorem{proposition}[definition]{命題}
+\newtheorem{example}[definition]{例}
+\newtheorem{proof}{証明:\hspace*{-3pt}}
+\renewcommand{\theproof}{}
+\def\QED{\hspace*{\fill}$\square$}
+
+\begin{document}
+
+%%% Header
+\begin{flushleft}
+    B3ヒューマンインターフェース期末レポート\hspace{\fill}
+    1223033129 温水心琴
+\end{flushleft}
+
+%%% Body
+
+\section{導入}
+\subsection{設問}
+与えられた4つの設問のうち，一つ目にあたる特異な視覚ディスプレイについて述べる．
+このレポートでは，特異な視覚ディスプレイとして網膜投影ディスプレイを例に挙げる．
+
+\subsection{網膜投影型ディスプレイとは}
+網膜投影型ディスプレイは，マックスウェル視を利用して観察者の眼球内に光を入れることで映像を呈示することができる．
+現実世界に仮想映像を表示するARにおいて，シースルー型HMDが多用されているが，
+シースルー型HMDで現実世界と仮想映像を同時に観察しようとすると，現実世界を観察するときの
+焦点調節はダイナミックに変化するにも関わらず仮想世界を見るときの焦点調節は固定されているため，
+焦点調節と輻輳が一致しないという問題が生じる．
+一方で，網膜投影型ディスプレイでは，この問題を克服できると期待される．
+また，ARにおいて近点から無限遠まで外界を観察する場合でも，仮想映像が常に鮮明に見えるという利点もあると考えられる．
+\cite{3DIC2000}
+
+\section{網膜投影型ディスプレイの原理と技術}
+\subsection{マクスウェル視}
+通常，物体を観察するときは大賞物体からくる書く参考を水晶体で収束して網膜上で結像する．
+一方，マクスウェル視は，物体から出た光を一度レンズで集光させ，その周口店に瞳孔中心をおいて網膜上に投影して像を観察する．
+瞳孔の中心を通る光は，水晶体の厚みの変化に関係なく網膜の広い範囲に均一に達する．
+そのため，マクスウェル視で物体を見た場合，水晶体の調節機能を使用せず，映像を直接網膜に投影するため，
+現実のどの位置に焦点を合わせても仮想映像を鮮明に観察することができる．
+\cite{FIT2002}
+\cite{RetinalPSD}
+
+\section{網膜投影型ディスプレイの利点と課題}
+
+\section{網膜投影型ディスプレイの応用例と今後}
+
+%%% Reference
+\begin{thebibliography}{99}
+    \bibitem{3DIC2000} 安東孝久，濱岸五郎，坂東進，志水英二．2眼立体視型網膜投影ディスプレイ．
+        3D Image Conference．2000，4-6，p103-106
+    \bibitem{FIT2002} 江泉清隆，髙橋秀也，志水英二．網膜投影型表示システムの一方式．
+        FIT(情報科学技術フォーラム)．2002，K-34，p435-436
+    \bibitem{RetinalPSD} 安東孝久．網膜投影型立体ディスプレイ．
+        光学．2002，31巻，3号，p157-159
+\end{thebibliography}
+
+%ex
+%abc abc.defを参照する \cite{hogehoge}.
+
+\end{document}
